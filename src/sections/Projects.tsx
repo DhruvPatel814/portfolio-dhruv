@@ -4,7 +4,10 @@ import ProjectCard from "../components/ProjectCard";
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-20 px-6 bg-white">
+    <section
+      id="projects"
+      className="py-20 px-6 bg-white dark:bg-gray-900 transition-colors duration-300"
+    >
       <div className="max-w-6xl mx-auto">
 
         {/* Title */}
@@ -12,7 +15,7 @@ const Projects: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-gray-900 mb-10"
+          className="text-4xl font-bold mb-10 text-gray-900 dark:text-gray-100"
         >
           Projects
         </motion.h2>

@@ -16,16 +16,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   demo,
 }) => {
   return (
-    <div className="p-6 bg-white rounded-xl shadow-md border hover:shadow-xl transition-transform hover:-translate-y-1">
-      <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
-      <p className="mt-3 text-gray-700">{description}</p>
+    <div
+      className="
+        p-6 rounded-xl border shadow-md transition-all
+        bg-white text-gray-900 border-gray-200
+        hover:shadow-xl hover:-translate-y-1
+
+        dark:bg-gray-800 dark:text-gray-100 dark:border-gray-700
+      "
+    >
+      <h3 className="text-2xl font-semibold">{title}</h3>
+
+      <p className="mt-3 text-gray-700 dark:text-gray-300">
+        {description}
+      </p>
 
       {/* Tech Stack */}
       <div className="mt-4 flex flex-wrap gap-2">
         {tech.map((item) => (
           <span
             key={item}
-            className="px-3 py-1 bg-gray-100 rounded-full text-sm border"
+            className="
+              px-3 py-1 rounded-full text-sm border
+              bg-gray-100 text-gray-800 border-gray-300
+
+              dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600
+            "
           >
             {item}
           </span>
@@ -37,17 +53,28 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         {github && (
           <a
             href={github}
-            className="px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-gray-700"
             target="_blank"
+            className="
+              px-4 py-2 rounded-md text-white transition
+              bg-gray-900 hover:bg-gray-700
+
+              dark:bg-indigo-600 dark:hover:bg-indigo-500
+            "
           >
             GitHub
           </a>
         )}
+
         {demo && (
           <a
             href={demo}
-            className="px-4 py-2 border border-gray-900 rounded-md hover:bg-gray-200"
             target="_blank"
+            className="
+              px-4 py-2 rounded-md border transition
+              border-gray-900 text-gray-900 hover:bg-gray-200
+
+              dark:border-gray-500 dark:text-gray-200 dark:hover:bg-gray-700
+            "
           >
             Live Demo
           </a>
